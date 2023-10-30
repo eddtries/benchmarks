@@ -30,6 +30,7 @@ def solution_two(input_str):
 
 if __name__ == '__main__':
     text = read_file('./odyssey.txt')
+
     starttime = timeit.default_timer()
     for i in range(1, 10000):
         solution_one(text)
