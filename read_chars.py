@@ -31,14 +31,16 @@ def solution_two(input_str):
 if __name__ == '__main__':
     text = read_file('./odyssey.txt')
 
+    assert solution_one(text) == solution_two(text)
+
     starttime = timeit.default_timer()
-    for i in range(1, 10000):
+    for i in range(1, 100000):
         solution_one(text)
     print("Solution A:",
           timeit.default_timer() - starttime)
 
     starttime = timeit.default_timer()
-    for i in range(1, 10000):
+    for i in range(1, 100000):
         solution_two(text)
     print("Solution B:",
           timeit.default_timer() - starttime)
